@@ -1,0 +1,288 @@
+:root {
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+body {
+    font-size: 18px;
+    background-color: var(--AlmostWhite);
+    margin: 0 auto;
+    font-family: 'Epilogue', sans-serif;
+    height: 100vh;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    padding: 30px 50px;
+    align-items: center;
+}
+.logo img {
+    width: 13vh;
+}
+.menu {
+    margin-left: 25px;
+    text-align: start;
+}
+.menu a{
+    color: var(--MediumGray);
+    text-decoration: none;
+}
+.menu img {
+    width: 12px;
+}
+.Featurelist {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0;
+    visibility: hidden;
+    position: fixed;
+    top: 7%;
+    left: 0%;
+    transform: translateX(125%);
+    padding: 10px 20px;
+    z-index: 1000;
+    background-color: var(--AlmostWhite);
+}
+.Featurelist div {
+    padding: 8px 3px;
+}
+.Featurelist img {
+    padding-right: 5px;
+}
+.Companylist {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0;
+    visibility: hidden;
+    position: fixed;
+    top: 7%;
+    left: 0%;
+    transform: translateX(290%);
+    padding: 10px 20px;
+    z-index: 1000;
+    background-color: var(--AlmostWhite);
+}
+.Companylist div {
+    padding: 8px 3px;
+}
+
+
+header span {
+    color: var(--MediumGray);
+    padding: 5px 12px;
+    font-size: 14px;
+}
+header span:hover {
+    cursor: pointer;
+}
+.Login {
+    text-align: end;
+}
+.RegisterBtn {
+    border: 2px solid var(--MediumGray);
+    border-radius: 15px;
+    padding: 15px;
+}
+.RegisterBtn:hover {
+    background-color: var(--MediumGray);
+    color: var(--AlmostWhite);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125vh;
+    margin: auto;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    margin: 30px auto;
+}
+.textbox {
+    padding: 20px 40px;
+}
+.textbox h1 {
+    font-weight: 700;
+    font-size: 75px;
+}
+.textbox p {
+    color: var(--MediumGray);
+    font-weight: 500;
+    font-size: large;
+}
+.LMBtn {
+    color: var(--AlmostWhite);
+    background-color: var(--AlmostBlack);
+    border: 1px solid var(--AlmostWhite);
+    padding: 20px 50px;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.LMBtn:hover {
+    cursor: pointer;
+    background-color: var(--AlmostWhite);
+    border: 1px solid var(--AlmostBlack);
+    color: var(--AlmostBlack);
+}
+
+.alert {
+    background-color: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+    opacity: 0.8;
+    transition: opacity 3s ease-in-out;
+    border-radius: 20px;
+    padding: 50px 70px;
+    font-size: larger;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-30%);
+    z-index: 1000;
+    box-shadow: 0 0 20px 0;
+    display: none;
+}
+
+.images {
+    margin-top: 10px;
+    text-align: center;
+    width: 65vh;
+}
+.images img {
+    width: 120px;
+    padding-right: 15px;
+}
+.image img {
+    height: 60vh;
+    padding: 10px;
+}
+.sidebar {
+    display: none;
+}
+.openmenu {
+    display: none;
+}
+.m-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+    header { 
+        grid-template-columns: auto 1fr;
+        justify-items: end;
+    }
+    section {
+        width: auto;
+    }
+    .images {
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;    
+    }
+    .image img {
+        height: 50vh;
+    }
+    .container {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .textbox { 
+        text-align: center;
+    }
+    .menu, .Login {
+        display: none;
+    }
+    .openmenu {
+        display: block;
+        width: 40px;
+    }
+    .m-menu {
+        display: block;
+        z-index: 1;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        right: 0;
+        height: 80%;
+        background-color: white;
+        position: fixed;
+        padding: 100px 50px 80px;
+        color: var(--MediumGray);
+        justify-content: space-between;
+        visibility: hidden;
+        overflow: auto;
+    }
+    .sidebar a {
+        text-decoration: none;
+        color: var(--MediumGray);
+    }
+    .sidebar div {
+        margin: 10px 5px;
+    }
+    .sidebarmenu {
+        height: 580px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .loginBtn {
+        text-align: center;
+        margin: 50px 0 20px 0;
+    }
+    .MRegisterBtn {
+        border: 2px solid var(--MediumGray);
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+        width: 15vh;
+    }
+    .closeimg {
+        width: 35px;
+        top: 15px;
+        right: 15px;
+        position: fixed;
+    }
+    .MFeaturelist {
+        padding-left: 30px;
+        display: none;
+    }
+    .MFeaturelist div {
+        padding: 15px 0;
+        font-size: 16px;
+    }
+    .MFeaturelist img {
+        padding-right: 3px;
+    }
+
+    .MCompanylist {
+        padding-left: 30px;
+        display: none;
+    }
+    .MCompanylist div {
+        padding: 15px 0;
+        font-size: 16px;
+    }
+    .alert { 
+        transform: translate(-45%);
+    }
+    .MRegisterBtn:hover {
+        background-color: var(--MediumGray);
+        color: var(--AlmostWhite);
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
