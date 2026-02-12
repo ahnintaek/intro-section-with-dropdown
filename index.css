@@ -18,6 +18,12 @@ header {
     padding: 30px 50px;
     align-items: center;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
 .logo img {
     width: 13vh;
 }
