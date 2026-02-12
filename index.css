@@ -19,7 +19,7 @@ header {
     align-items: center;
 }
 
-footer {
+.attribution {
     position: absolute;
     bottom: 0;
 }
